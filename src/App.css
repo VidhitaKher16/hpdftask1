@@ -14,6 +14,12 @@
   padding: 20px;
   color: blue;
 }
+.Search-header {
+  background-color: #2196F3;
+  height: 50px;
+  padding: 20px;
+  color: white;
+}
 .Card-vk {
     
 	width: 30%;
@@ -21,6 +27,28 @@
     margin-bottom: 50px;
     margin-right: 10px;
     margin-left: -10px;
+    background-color: white;
+}
+
+.TopnewsCard {
+    
+	width: 50%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 70px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+.SearchFiltertab {
+	width: 15%;
+	height: 30%;
+    background-color: white;
+}
+
+.RelatedArticletab {
+	width: 35%;
+	
     background-color: white;
 }
 
@@ -130,6 +158,42 @@
         border: 1px solid #ccc;
     }
 }
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
 .upperheader {
     
     display: flex;
