@@ -94,6 +94,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Something Missing?](#something-missing)
+- [Rendering-App.js-OR-Search.js-manually?](#rendering-App.js-or-Search.js-manually)
+
+
 
 ## Updating to New Releases
 
@@ -2227,3 +2230,24 @@ In the future, we might start automatically compiling incompatible third-party m
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+
+## Rendering App.js OR Search.js ??(manually)
+
+While trying to execute the code in your local please manually edit the RenderDOM method of Index.js inside /src folder to point to two jsx files `App.js` and 'Search.js` which export the default classes `App` and `Search`
+App.js has the twitter main page functionality and Search.js has the Search Page functionality
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Search from './Search';
+{/*import App from './App';*/}
+import registerServiceWorker from './registerServiceWorker';
+
+
+{/*ReactDOM.render(<App />, document.getElementById('root'));*/}
+ReactDOM.render(<Search />, document.getElementById('root'));
+registerServiceWorker();
+Uncomment the code lines @2239 and 2243 while trying to redner the App.js i.e. twitter main page
+Please pardon the aesthetics of main page for this very time , am working on improving the same as this was my first attempt on frontend development
+The screenshots of the local developemnt has been added for reference to the public folder with the following name:
+1. TwitterMainPage_ScreenShot_Local
+2. TwitterSearchPage_ScreenShot_Local
